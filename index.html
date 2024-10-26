@@ -4,6 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Generation Demos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h2 {
+            color: #4a90e2;
+            margin-top: 20px;
+        }
+
+        .demo-section {
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .audio-control {
+            display: inline-block;
+            margin: 10px 5px;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+    </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const audioElements = document.querySelectorAll("audio");
@@ -25,87 +76,109 @@
     <h1>Music Generation Demo Samples</h1>
 
     <!-- Baseline Samples -->
-    <h2>Baseline Model</h2>
-    <div>
-        <audio controls preload="none">
-            <source src="demos/0_baseline/sample_1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/0_baseline/sample_2.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/0_baseline/sample_3.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/0_baseline/sample_4.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+    <div class="demo-section">
+        <h2>Baseline Model</h2>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/0_baseline/sample_1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/0_baseline/sample_2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/0_baseline/sample_3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/0_baseline/sample_4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
+
+    <hr>
 
     <!-- Segment Model Samples -->
-    <h2>Segment Model</h2>
-    <div>
-        <audio controls preload="none">
-            <source src="demos/1_segment/sample_1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/1_segment/sample_2.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/1_segment/sample_3.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/1_segment/sample_4.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+    <div class="demo-section">
+        <h2>Segment Model</h2>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/1_segment/sample_1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/1_segment/sample_2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/1_segment/sample_3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/1_segment/sample_4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
+
+    <hr>
 
     <!-- Multi-Scale Attention Samples -->
-    <h2>Multi-Scale Attention Model</h2>
-    <div>
-        <audio controls preload="none">
-            <source src="demos/2_multiscale/sample_1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/2_multiscale/sample_2.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/2_multiscale/sample_3.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/2_multiscale/sample_4.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+    <div class="demo-section">
+        <h2>Multi-Scale Attention Model</h2>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/2_multiscale/sample_1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/2_multiscale/sample_2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/2_multiscale/sample_3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/2_multiscale/sample_4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
 
+    <hr>
+
     <!-- Classical Model Samples -->
-    <h2>Multi-Scale Attention Model on Large Classical Datasets</h2>
-    <div>
-        <audio controls preload="none">
-            <source src="demos/3_classical/sample_1.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/3_classical/sample_2.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/3_classical/sample_3.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio controls preload="none">
-            <source src="demos/3_classical/sample_4.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+    <div class="demo-section">
+        <h2>Multi-Scale Attention Model on Large Classical Datasets</h2>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/3_classical/sample_1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/3_classical/sample_2.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/3_classical/sample_3.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="audio-control">
+            <audio controls preload="none">
+                <source src="demos/3_classical/sample_4.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
 
 </body>
