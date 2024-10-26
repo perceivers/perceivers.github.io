@@ -1,78 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Scale Perceiver for Symbolic Music Generation</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <style>
-        body { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; margin: 0; }
-        .container { max-width: 900px; margin: auto; padding: 20px; }
-        h1, h2 { color: #333; }
-        h1 { font-weight: 700; margin-top: 20px; }
-        h2 { font-weight: 400; margin-top: 20px; }
-        .section { padding: 15px 0; border-bottom: 1px solid #ddd; }
-        .experiment { padding: 10px 0; }
-        a.demo-link { color: #007acc; text-decoration: none; }
-        a.demo-link:hover { text-decoration: underline; }
-        .footer { padding: 10px 0; text-align: center; color: #555; font-size: 0.9em; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perceiver Multi-Scale Music Generation Demos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Multi-Scale Perceiver for Symbolic Music Generation</h1>
-        <p>Explore the demos of our model trained on various datasets with different settings. Each experiment showcases unique aspects of music generation using multi-scale cross-attention with long-term coherence and expressive details.</p>
+  <header>
+    <h1>Perceiver Multi-Scale Music Generation Demos</h1>
+    <p>Explore the generated music samples from our experiments with the Perceiver AR model. Each demo showcases different configurations and settings.</p>
+  </header>
 
-        <div class="section">
-            <h2>Experiments and Demos</h2>
-            
-            <!-- Experiment 1 -->
-            <div class="experiment">
-                <h3>1. Input Sequence Segmentation</h3>
-                <p>Comparison between baseline and improved segmentation approaches in autoregressive training. The improved model shows significantly enhanced generation quality.</p>
-                <p><a class="demo-link" href="demos/segmentation_baseline.mp3">Baseline Segmentation Demo (MP3)</a> | <a class="demo-link" href="demos/segmentation_improved.mp3">Improved Segmentation Demo (MP3)</a></p>
-            </div>
+  <section class="demo-container">
+    <h2>Demos</h2>
 
-            <!-- Experiment 2 -->
-            <div class="experiment">
-                <h3>2. Long vs. Short Context Lengths</h3>
-                <p>Comparison of generation quality with long (32,768 tokens) and short (1,024 tokens) context lengths. Long contexts maintain coherence, while short contexts exhibit greater diversity.</p>
-                <p><a class="demo-link" href="demos/long_context.mp3">Long Context Demo (MP3)</a> | <a class="demo-link" href="demos/short_context.mp3">Short Context Demo (MP3)</a></p>
-            </div>
-
-            <!-- Experiment 3 -->
-            <div class="experiment">
-                <h3>3. Multi-Scale Cross-Attention with Scale Masks</h3>
-                <p>Four methods for combining two layers of cross-attention with different scale masks:</p>
-                <ul>
-                    <li><a class="demo-link" href="demos/cascade.mp3">Cascade</a></li>
-                    <li><a class="demo-link" href="demos/sum.mp3">Sum</a></li>
-                    <li><a class="demo-link" href="demos/concatenate.mp3">Concatenate</a></li>
-                    <li><a class="demo-link" href="demos/mlp.mp3">MLP</a></li>
-                </ul>
-                <p>Results show Cascade achieved the best performance while MLP showed relatively lower quality.</p>
-            </div>
-
-            <!-- Experiment 4 -->
-            <div class="experiment">
-                <h3>4. Learnable Latent vs. Last Tokens as Query</h3>
-                <p>Comparison between using a learnable latent as the query and using the last 1,024 tokens. The latent query approach showed lower quality results.</p>
-                <p><a class="demo-link" href="demos/latent_query.mp3">Learnable Latent Query Demo (MP3)</a> | <a class="demo-link" href="demos/last_tokens_query.mp3">Last Tokens Query Demo (MP3)</a></p>
-            </div>
-
-            <!-- Experiment 5 -->
-            <div class="experiment">
-                <h3>5. Fine-Tuning with Combined Datasets</h3>
-                <p>Fine-tuning the Cascade multi-scale cross-attention model on a combined dataset (Maestro, GiantMIDI, Atepp). Demonstrates the model’s generalization ability.</p>
-                <p><a class="demo-link" href="demos/fine_tuned_cascade.mp3">Fine-Tuned Cascade Demo (MP3)</a></p>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Project by Yungang Yi, Weihua Li, and Matthew Kuo | <a href="https://github.com/perceiver-ms">GitHub Repository</a></p>
-        </div>
+    <!-- Example Demo -->
+    <div class="demo-item">
+      <h3>Demo 1: Baseline Model Output</h3>
+      <audio controls>
+        <source src="demos/demo1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <p>Description: Generated using the baseline model on the Maestro dataset.</p>
     </div>
+
+    <div class="demo-item">
+      <h3>Demo 2: Improved Multi-Scale Attention</h3>
+      <audio controls>
+        <source src="demos/demo2.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <p>Description: Generated using multi-scale attention with two different scale masks.</p>
+    </div>
+
+    <div class="demo-item">
+      <h3>Demo 3: Cascaded Cross Attention with Combined Datasets</h3>
+      <audio controls>
+        <source src="demos/demo3.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <p>Description: Fine-tuned on combined Maestro, GiantMIDI, and Atepp datasets.</p>
+    </div>
+    
+  </section>
+
+  <footer>
+    <p>Learn more about this project on our <a href="https://github.com/perceiver-ms">GitHub repository</a>.</p>
+  </footer>
 
 </body>
 </html>
