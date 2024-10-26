@@ -1,54 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perceiver Multi-Scale Music Generation Demos</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Generation Demos</title>
 </head>
 <body>
+    <h1>Music Generation Demo Samples</h1>
 
-  <header>
-    <h1>Perceiver Multi-Scale Music Generation Demos</h1>
-    <p>Explore the generated music samples from our experiments with the Perceiver AR model. Each demo showcases different configurations and settings.</p>
-  </header>
-
-  <section class="demo-container">
-    <h2>Demos</h2>
-
-    <!-- Example Demo -->
-    <div class="demo-item">
-      <h3>Demo 1: Baseline Model Output</h3>
-      <audio controls>
-        <source src="demos/demo1.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-      <p>Description: Generated using the baseline model on the Maestro dataset.</p>
+    <!-- Baseline Samples -->
+    <h2>Baseline Model</h2>
+    <div>
+        <audio controls>
+            <source src="demos/0_baseline/sample_1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/0_baseline/sample_2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/0_baseline/sample_3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/0_baseline/sample_4.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
-    <div class="demo-item">
-      <h3>Demo 2: Improved Multi-Scale Attention</h3>
-      <audio controls>
-        <source src="demos/demo2.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-      <p>Description: Generated using multi-scale attention with two different scale masks.</p>
+    <!-- Segment Model Samples -->
+    <h2>Segment Model</h2>
+    <div>
+        <audio controls>
+            <source src="demos/1_segment/sample_1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/1_segment/sample_2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/1_segment/sample_3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/1_segment/sample_4.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
-    <div class="demo-item">
-      <h3>Demo 3: Cascaded Cross Attention with Combined Datasets</h3>
-      <audio controls>
-        <source src="demos/demo3.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-      </audio>
-      <p>Description: Fine-tuned on combined Maestro, GiantMIDI, and Atepp datasets.</p>
+    <!-- Multi-Scale Attention Samples -->
+    <h2>Multi-Scale Attention Model</h2>
+    <div>
+        <audio controls>
+            <source src="demos/2_multiscale/sample_1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/2_multiscale/sample_2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/2_multiscale/sample_3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/2_multiscale/sample_4.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
-    
-  </section>
 
-  <footer>
-    <p>Learn more about this project on our <a href="https://github.com/perceiver-ms">GitHub repository</a>.</p>
-  </footer>
+    <!-- Classical Model Samples -->
+    <h2>Classical Model</h2>
+    <div>
+        <audio controls>
+            <source src="demos/3_classical/sample_1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/3_classical/sample_2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/3_classical/sample_3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio controls>
+            <source src="demos/3_classical/sample_4.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
 </body>
 </html>
