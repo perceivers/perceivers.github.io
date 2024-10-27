@@ -1,210 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Generation Demos</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #F2ECE4;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            text-align: center;
-        }
-
-        .logo-section {
-            background-color: #FFFFFF;
-            margin: 20px auto;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo {
-            margin-top: 10px;
-        }
-
-        h1 {
-            font-family: 'Roboto Slab', serif;
-            font-weight: 400;
-            background-color: #4D6A6D;
-            color: #FFF;
-            padding: 20px;
-            margin: 0;
-            font-size: 2em;
-        }
-
-        h2 {
-            font-family: 'Roboto Slab', serif;
-            color: #DB4C40;
-            font-size: 1.5em;
-            margin-top: 20px;
-        }
-
-        .demo-section {
-            background-color: #FFFFFF;
-            margin: 20px auto;
-            padding: 20px;
-            width: 90%;
-            max-width: 800px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .audio-control {
-            display: inline-block;
-            margin: 10px 5px;
-            width: 100%;
-            max-width: 250px;
-        }
-
-        audio {
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        hr {
-            border: none;
-            height: 1px;
-            background-color: #B0BEC5;
-            margin: 20px 0;
-        }
-    </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const audioElements = document.querySelectorAll("audio");
-            
-            audioElements.forEach(audio => {
-                audio.addEventListener("play", function() {
-                    audioElements.forEach(otherAudio => {
-                        if (otherAudio !== audio) {
-                            otherAudio.pause();
-                            otherAudio.currentTime = 0;
-                        }
-                    });
-                });
-            });
-        });
-    </script>
+  <title>PerceiverS: A Multi-Scale Perceiver for Long-Term Expressive Symbolic Music Generation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900"> 
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="logo-section">
-        <img src="images/logo.png" alt="Perceiver Logo" class="logo" width="100" height="100">
+  <div class="site-wrap">
+    <header class="site-navbar py-4" role="banner">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-4 d-flex align-items-center">
+            <a href="index.html" class="d-flex align-items-center" style="text-decoration: none; color: inherit;">
+              <img src="images/logo.png" alt="Logo" style="height: 120px; margin-right: 10px;">
+              <span class="h2 site-logo" style="white-space: normal;">Research Paper Demo</span>
+            </a>
+          </div>          
+          <div class="col-8">
+            <nav class="site-navigation position-relative text-right text-md-right" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="https://arxiv.org/abs/2410.19999">Thesis</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container pt-5 hero">
+      <div class="row align-items-center text-center text-md-left">
+	    <div class="col-12" style="display: inline-block; width: 100%;">
+	      <h1 class="mb-3 display-3" style="overflow: hidden; text-align: center;">
+	        Perceiver<em>S</em>: A Multi-Scale Perceiver for Long-Term Expressive Symbolic Music Generation
+	      </h1>
+	    </div>
+        <div class="col-lg-4">
+          <p>In this work, we introduced a novel model, <strong>Perceiver<em>S</em></strong>, which builds on the Perceiver AR architecture by incorporating <strong>Efficient <em>S</em>egmentation</strong> and a <strong>Multi-<em>S</em>cale</strong> attention mechanism. The <strong>Efficient <em>S</em>egmentation</strong> approach progressively expands the context segment during training, aligning more closely with autoregressive generation and enabling smooth, coherent generation across ultra-long symbolic music sequences. The <strong>Multi-<em>S</em>cale</strong> attention mechanism further enhances the model's ability to capture both long-term structural dependencies and short-term expressive details.</p>
+        </div>
+        <div class="col-lg-8">
+          <img src="images/1x/asset-1.png" alt="Image" class="img-fluid">    
+        </div>
+      </div>
     </div>
 
-    <h1>Music Generation Demo Samples</h1>
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="featured-user mb-5 mb-lg-0">
+              <h3 class="mb-4">Authors</h3>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="https://www.linkedin.com/in/lukeyi" class="d-flex align-items-center">
+                    <img src="images/yungang_yi.png" alt="Yungang Yi" class="img-fluid mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                    <div class="podcaster">
+                      <span class="d-block">Yungang Yi</span>
+                      <span class="small">Author & Researcher</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://academics.aut.ac.nz/weihua.li" class="d-flex align-items-center">
+                    <img src="images/weihua_li.png" alt="Weihua Li" class="img-fluid mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                    <div class="podcaster">
+                      <span class="d-block">Weihua Li</span>
+                      <span class="small">Author & Supervisor</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://academics.aut.ac.nz/matthew.kuo" class="d-flex align-items-center">
+                    <img src="images/matthew_kuo.png" alt="Matthew Kuo" class="img-fluid mr-2" style="width: 40px; height: 40px; border-radius: 50%;">
+                    <div class="podcaster">
+                      <span class="d-block">Matthew Kuo</span>
+                      <span class="small">Author & Supervisor</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-    <!-- Baseline Samples -->
-    <div class="demo-section">
-        <h2>Baseline Model</h2>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/0_baseline/sample_1.mp3" type="audio/mpeg">
-            </audio>
+          <div class="col-lg-9">
+            <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
+              <div class="image" style="background-image: url('images/session_1.png');"></div>
+              <div class="text">
+                <h3 class="font-weight-light" style="color: #3ca59d;">Section 1: Baseline Model</h3>
+                <div class="text-white mb-3">
+                  <span class="text-black-opacity-05">
+                    <small>Dataset: Maestro <span class="sep">/</span> Context Length: 32,768 <span class="sep">/</span> Segmentation: Default <span class="sep">/</span> Cross Attention Mask: None</small>
+                  </span>
+                </div>
+                <div class="player">
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section1/sample1.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section1/sample2.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section1/sample3.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section1/sample4.mp3" type="audio/mpeg"></audio><br>
+                </div>
+              </div>
+            </div>
+            
+            <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
+              <div class="image" style="background-image: url('images/session_2.png');"></div>
+              <div class="text">
+                <h3 class="font-weight-light" style="color: #3ca59d;">Section 2: Applied <strong>Efficient <em>S</em>egmentation</strong></h3>
+                <div class="text-white mb-3">
+                  <span class="text-black-opacity-05">
+                    <small>Dataset: Maestro <span class="sep">/</span> Context Length: 32,768 <span class="sep">/</span> Segmentation: Progressive <span class="sep">/</span> Cross Attention Mask: None</small>
+                  </span>
+                </div>
+                <div class="player">
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section2/sample1.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section2/sample2.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section2/sample3.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section2/sample4.mp3" type="audio/mpeg"></audio><br>
+                </div>
+              </div>
+            </div>
+            
+            <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
+              <div class="image" style="background-image: url('images/session_3.png');"></div>
+              <div class="text">
+                <h3 class="font-weight-light" style="color: #3ca59d;">Section 3: <strong>Multi-<em>S</em>cale</strong> Mask Added to Cross Attention</h3>
+                <div class="text-white mb-3">
+                  <span class="text-black-opacity-05">
+                    <small>Dataset: Maestro <span class="sep">/</span> Context Length: 32,768 <span class="sep">/</span> Segmentation: Progressive <span class="sep">/</span> Cross Attention Mask: Multi-Scale</small>
+                  </span>
+                </div>
+                <div class="player">
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section3/sample1.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section3/sample2.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section3/sample3.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section3/sample4.mp3" type="audio/mpeg"></audio><br>
+                </div>
+              </div>
+            </div>
+            
+            <div class="d-block d-md-flex podcast-entry bg-white mb-5" data-aos="fade-up">
+              <div class="image" style="background-image: url('images/session_4.png');"></div>
+              <div class="text">
+                <h3 class="font-weight-light" style="color: #3ca59d;">Section 4: Fine-tuned on Large Datasets</h3>
+                <div class="text-white mb-3">
+                  <span class="text-black-opacity-05">
+                    <small>Dataset: Maestro + GiantMIDI + ATEPP <span class="sep">/</span> Context Length: 32,768 <span class="sep">/</span> Segmentation: Progressive <span class="sep">/</span> Cross Attention Mask: Multi-Scale</small>
+                  </span>
+                </div>
+                <div class="player">
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section4/sample1.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section4/sample2.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section4/sample3.mp3" type="audio/mpeg"></audio><br>
+                  <audio controls preload="none" style="max-width: 100%;"><source src="demos/section4/sample4.mp3" type="audio/mpeg"></audio><br>
+                </div>
+              </div>
+            </div>
+            
+          </div>
         </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/0_baseline/sample_2.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/0_baseline/sample_3.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/0_baseline/sample_4.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+      </div>
     </div>
 
-    <hr>
-
-    <!-- Segment Model Samples -->
-    <div class="demo-section">
-        <h2>Segment Model</h2>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/1_segment/sample_1.mp3" type="audio/mpeg">
-            </audio>
+    <div class="site-section bg-light block-13">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-12 text-center">
+            <h2 class="font-weight-bold text-black">Citing This Paper</h2>
+          </div>
         </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/1_segment/sample_2.mp3" type="audio/mpeg">
-            </audio>
+        <div class="text-center p-3 p-md-5 bg-white">
+          <p>To cite this paper, please use the following format:</p>
+          <pre>[Your citation format here]</pre>
         </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/1_segment/sample_3.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/1_segment/sample_4.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+      </div>
     </div>
 
-    <hr>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <p>&copy; 2024 All rights reserved | Based on a template by Colorlib</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-    <!-- Multi-Scale Attention Samples -->
-    <div class="demo-section">
-        <h2>Multi-Scale Attention Model</h2>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/2_multiscale/sample_1.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/2_multiscale/sample_2.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/2_multiscale/sample_3.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/2_multiscale/sample_4.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-    </div>
-
-    <hr>
-
-    <!-- Classical Model Samples -->
-    <div class="demo-section">
-        <h2>Multi-Scale Attention Model on Large Classical Datasets</h2>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/3_classical/sample_1.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/3_classical/sample_2.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/3_classical/sample_3.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="audio-control">
-            <audio controls preload="none">
-                <source src="demos/3_classical/sample_4.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-    </div>
-
+  <script src="js/audio-control.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/mediaelement-and-player.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
