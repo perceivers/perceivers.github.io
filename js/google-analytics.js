@@ -9,4 +9,17 @@
   function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
   gtag('config', 'G-MWT1X4KCMM');
+
+  // Track MP3 play events
+  document.addEventListener('DOMContentLoaded', function() {
+    var audios = document.querySelectorAll('audio');
+    audios.forEach(function(audio) {
+      audio.addEventListener('play', function() {
+        gtag('event', 'play', {
+          'event_category': 'Audio',
+          'event_label': audio.currentSrc
+        });
+      });
+    });
+  });
 })();
