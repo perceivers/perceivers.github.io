@@ -992,3 +992,6 @@ a {
   .hero h1 {
     font-size: 40px !important; } }
 
+.hidden {
+  display: none !important;
+}
