@@ -991,7 +991,3 @@ a {
 @media (max-width: 991.98px) {
   .hero h1 {
     font-size: 40px !important; } }
-
-.hidden {
-  display: none !important;
-}
