@@ -30,7 +30,7 @@
             <nav class="site-navigation position-relative text-right text-md-right" role="navigation">
               <ul class="site-menu js-clone-nav d-none d-lg-block">
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="https://arxiv.org/abs/2411.08307">Thesis</a></li>
+                <li><a href="https://ieeexplore.ieee.org/document/11172710">Thesis</a></li>
               </ul>
             </nav>
           </div>
@@ -48,6 +48,7 @@
         <div class="col-lg-4">
           <p>In this work, we introduced a novel model, <strong>Perceiver<em>S</em></strong>, which builds on the Perceiver AR architecture by incorporating <strong>Effective <em>S</em>egmentation</strong> and a <strong>Multi-<em>S</em>cale</strong> attention mechanism. The <strong>Effective <em>S</em>egmentation</strong> approach progressively expands the context segment during training, aligning more closely with autoregressive generation and enabling smooth, coherent generation across ultra-long symbolic music sequences. The <strong>Multi-<em>S</em>cale</strong> attention mechanism further enhances the model's ability to capture both long-term structural dependencies and short-term expressive details.</p>
           <p>All music pieces are presented in the order they were originally generated, with no selection, filtering, or reordering applied. Click <a href="https://soundcloud.com/perceivers/sets/perceivers-demo-music">here</a> to listen to more demo music.</p>
+          <p>This article has been published in <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10723155">IEEE Transactions on Audio, Speech and Language Processing</a>.</p>
         </div>
         <div class="col-lg-8">
           <img src="images/1x/asset-1.png" alt="Image" class="img-fluid">    
@@ -172,15 +173,16 @@
         <div class="text-center p-3 p-md-5 bg-white">
           <p>To cite this paper, please use the following format:</p>
           <pre style="text-align: left; display: inline-block;">
-            @misc{yi2024perceiversmultiscaleperceivereffective,
-                  title={PerceiverS: A Multi-Scale Perceiver with Effective Segmentation for Long-Term Expressive Symbolic Music Generation}, 
-                  author={Yungang Yi and Weihua Li and Matthew Kuo and Quan Bai},
-                  year={2024},
-                  eprint={2411.08307},
-                  archivePrefix={arXiv},
-                  primaryClass={cs.AI},
-                  url={https://arxiv.org/abs/2411.08307}, 
-            }
+            @ARTICLE{11172710,
+              author={Yi, Yungang and Li, Weihua and Kuo, Matthew and Bai, Quan},
+              journal={IEEE Transactions on Audio, Speech and Language Processing}, 
+              title={PerceiverS: A Multi-Scale Perceiver with Effective Segmentation for Long-Term Expressive Symbolic Music Generation}, 
+              year={2025},
+              volume={},
+              number={},
+              pages={1-13},
+              keywords={Music;Transformers;Training;Computational modeling;Annotations;Bars;Context modeling;Attention mechanisms;Recording;Lead;Symbolic Music Generation;Long-Term Structure;Transformer Models;Cross-Attention;Self-Attention;PerceiverS;Effective Segmentation;Multi-Scale Attention},
+              doi={10.1109/TASLPRO.2025.3611836}}
           </pre>
         </div>
       </div>
